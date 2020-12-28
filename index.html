@@ -1,24 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>Hello World</h1>
-    <p>My name is Mac, and this is the first website that I have ever coded using HTML and CSS.</p>
-    <p>Now, I'm going to use FlexBox to draw some boxes below that shift according to the size of your browser.</p>
 
-    <section id="container">
-        <div style="background-color: #80ffdb"></div>
-        <div style="background-color: #64dfdf"></div>
-        <div style="background-color: #48bfe3"></div>
-        <div style="background-color: #5390d9"></div>
-        <div style="background-color: #6930c3"></div>
-    </section>
+<body>
+    <main>
+        <h1>
+            Hello World
+        </h1>
+        <p>My name is Mac, and this is the first published website that I have ever coded using HTML and CSS.</p>
+        <p>Now, I'm going to use CSS to demonstrate three different <span>FlexBox</span> properties.</p>
+        <hr>
+        <p>Below, you will find three black boxes, each containing five smaller boxes. The black box is the "parent"
+            content block,
+            and the smaller boxes are individual "child" content blocks.</p>
+        <p> The black boxes will adjust to the size of your
+            browser, not using <span>FlexBox</span>, but using a simple width property in CSS:
+            <code>
+                    #container1 {width: 100%}
+                </code>
+        </p>
+        <p>This line of code tells <code>container1</code> to expand its across the entire content block (i.e., from
+            left margin to right margin).</p>
+
+
+        <p>The template for the following demonstrations was created using this HTML and CSS code:</p>
+
+        <pre>
+            <code>
+                &lt;section id="container1"&gt;
+                    &lt;div style="background-color: #6a040f">&lt;/div&gt;
+                    &lt;div style="background-color: #9d0208">&lt;/div&gt;
+                    &lt;div style="background-color: #d00000">&lt;/div&gt;
+                    &lt;div style="background-color: #dc2f02">&lt;/div&gt;
+                    &lt;div style="background-color: #e85d04">&lt;/div&gt;
+                &lt;/section&gt;
+            </code>
+        </pre>
+
+        <pre>
+            <code>
+    #container1 {background-color: black; width: 100%; height: 400px;}
+    
+    #container1 div {width: 100px; height: 100px;}
+            </code>
+        </pre>
+
+        <p>
+            Now, we can use different <span>FlexBox</span> properties to easily change how the child boxes will be layed
+            out within the parent box. In this example, we will look at three variants of the
+            <code>justify-content</code> property.
+        </p>
+        <hr>
+
+        <h2>
+            Spaced Evenly
+        </h2>
+
+        <pre>
+            <code>
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+            </code>
+          </pre>
+
+        <section id="container1">
+            <div style="background-color: #6a040f"></div>
+            <div style="background-color: #9d0208"></div>
+            <div style="background-color: #d00000"></div>
+            <div style="background-color: #dc2f02"></div>
+            <div style="background-color: #e85d04"></div>
+        </section>
+
+        <hr>
+        <h2>
+            Spaced Around
+        </h2>
+
+        <pre>
+            <code>
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+            </code>
+          </pre>
+
+        <section id="container2">
+            <div style="background-color: #6a040f"></div>
+            <div style="background-color: #9d0208"></div>
+            <div style="background-color: #d00000"></div>
+            <div style="background-color: #dc2f02"></div>
+            <div style="background-color: #e85d04"></div>
+        </section>
+        <hr>
+        <h2>
+            Spaced Between
+        </h2>
+
+        <pre>
+            <code>
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+            </code>
+          </pre>
+
+        <section id="container3">
+            <div style="background-color: #6a040f"></div>
+            <div style="background-color: #9d0208"></div>
+            <div style="background-color: #d00000"></div>
+            <div style="background-color: #dc2f02"></div>
+            <div style="background-color: #e85d04"></div>
+        </section>
+    </main>
 
 
 </body>
+
 </html>
